@@ -1,0 +1,130 @@
+.teamdash-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  background-color: #f5f5dc;
+}
+
+.teamdash-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: #001a33;
+  color: #f5f5dc;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: default;
+}
+
+.teamdash-header .center span {
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.teamdash-header .center span:hover {
+  text-decoration: underline;
+}
+
+.teamdash-main {
+  flex: 1;
+  padding: 20px 40px;
+  text-align: center;
+  transition: filter 0.3s ease;
+}
+
+.teamdash-main.blurred {
+  filter: blur(5px);
+}
+
+.progress-graph {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.weekly-btn {
+  margin: 20px 0;
+}
+
+.weekly-btn button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #001a33;
+  color: #f5f5dc;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.weekly-btn button:hover {
+  background-color: #002b5c;
+  transform: scale(1.05);
+}
+
+.team-members {
+  margin-top: 30px;
+}
+
+.team-members ul {
+  list-style: none;
+  padding: 0;
+}
+
+.team-members li {
+  cursor: pointer;
+  margin: 8px 0;
+  color: #001a33;
+  font-weight: bold;
+}
+
+.team-members li:hover {
+  text-decoration: underline;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.popup {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 350px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+.popup input {
+  width: 90%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.popup button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #001a33;
+  color: #f5f5dc;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #002b5c;
+  transform: scale(1.05);
+}

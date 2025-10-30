@@ -1,0 +1,64 @@
+.signin-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5dc;
+  color: #001a33;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  background-color: #001a33;
+  color: #f5f5dc;
+  height: 50px;
+  padding: 20px;
+}
+.titleP{
+font-size: 2rem;
+}
+
+.signin-box {
+  margin: auto;
+  width: 300px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  height: 300px;
+}
+button{
+  margin-top: 20px;
+}
+
+.signin-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px -10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.signin-box button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #001a33;
+  color: #f5f5dc;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.signin-box button:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  background-color: #001a33;
+  color: #f5f5dc;
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.9rem;
+}
