@@ -20,7 +20,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="signin" element={<Signin/>} />
         <Route path="/team" element={<Team />} />
-        <Route path="/teamdash" element={<TeamDash />} />
+        <Route path="/teamdash/:teamName" element={<TeamDash />} />
       </Routes>
     </Router>
   );
