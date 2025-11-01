@@ -10,6 +10,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js";
+import Navbar from "./components/navbar";
 import "./teamdash.css";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
@@ -57,14 +58,7 @@ function TeamDash() {
   return (
     <div className="teamdash-container">
       {/* Header */}
-      <header className="teamdash-header">
-        <div className="left" onClick={() => navigate("/")}>TEAMCODEX</div>
-        <div className="center">
-          <span onClick={() => navigate("/")}>Home</span>
-          <span>Team</span>
-        </div>
-        <div className="right" onClick={() => setShowProfile(true)}>Profile</div>
-      </header>
+      <Navbar />
 
       <main className={`teamdash-main ${showWeekly || showProfile || showMember ? "blurred" : ""}`}>
         <h1>{teamName}</h1>

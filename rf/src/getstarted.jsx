@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./components/navbar";
 import "./getstarted.css";
 
 function GetStarted() {
@@ -7,9 +8,7 @@ function GetStarted() {
 
   return (
     <div className="getstarted-container">
-      <header className="header">
-        <h1>TEAMCODEX</h1>
-      </header>
+      <Navbar />
 
       <main className="main-content">
         <div className="hero">

@@ -1,6 +1,7 @@
 import React from "react";
 import "./login.css";
 import { Link, useNavigate } from "react-router-dom";
+import Navbar from "./components/navbar"
 import { color } from "chart.js/helpers";
 
 function Login() {
@@ -13,9 +14,7 @@ function Login() {
 
   return (
     <div className="login-container">
-      <header className="header">
-        <h1 className="titleP">TEAMCODEX</h1>
-      </header>
+      <Navbar />
 
       <div className="login-box">
         <h2>Login</h2>

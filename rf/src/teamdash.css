@@ -128,3 +128,7 @@
   background-color: #002b5c;
   transform: scale(1.05);
 }
+
+.left{
+  cursor: pointer;
+}

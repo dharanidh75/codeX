@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./team.css";
+import Navbar from "./components/navbar"
 
 function Team() {
   const navigate = useNavigate();
@@ -11,19 +12,6 @@ function Team() {
   const [teamCode, setTeamCode] = useState("");
   const [showCode, setShowCode] = useState(false);
   const [joinCode, setJoinCode] = useState("");
-  const [joinTeamName, setJoinTeamName] = useState("");
-  const [username, setUsername] = useState("");
-
-  // ✅ Check login before entering team page
-  useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("user"));
-    if (!user) {
-      alert("Please login first!");
-      navigate("/login");
-    } else {
-      setUsername(user.username);
-    }
-  }, [navigate]);
 
   // ✅ Generate random team code
   const generateTeamCode = () => {
@@ -52,21 +40,19 @@ function Team() {
 
   // ✅ Handle join team logic
   const handleJoin = () => {
-    if (joinCode.trim() === "" || joinTeamName.trim() === "") {
-      alert("Please fill in both team name and code!");
+    if (!joinCode.trim()) {
+      alert("Please enter a team code!");
       return;
     }
-    alert(`${username} joined team ${joinTeamName}!`);
+    alert(`Joined team with code: ${joinCode}`);
     closePopups();
-    navigate(`/teamdash/${joinTeamName}`);
+    navigate(`/teamdash/${joinCode}`);
   };
 
   return (
     <div className="team-container">
       {/* Header */}
-      <header className="header">
-        <h1>TEAMCODEX</h1>
-      </header>
+      <Navbar />
 
       {/* Main */}
       <main className={`team-main ${showCreate || showJoin ? "blurred" : ""}`}>
@@ -97,7 +83,7 @@ function Team() {
             />
             <input
               type="text"
-              placeholder="Enter team members (comma-separated)"
+              placeholder="Enter number of team members"
               value={teamMembers}
               onChange={(e) => setTeamMembers(e.target.value)}
             />
@@ -123,18 +109,6 @@ function Team() {
         <div className="popup-overlay" onClick={closePopups}>
           <div className="popup" onClick={(e) => e.stopPropagation()}>
             <h2>Join Team</h2>
-            <input
-              type="text"
-              placeholder="Enter your username"
-              value={username}
-              readOnly // Username comes from logged-in user
-            />
-            <input
-              type="text"
-              placeholder="Enter team name"
-              value={joinTeamName}
-              onChange={(e) => setJoinTeamName(e.target.value)}
-            />
             <input
               type="text"
               placeholder="Enter team code"

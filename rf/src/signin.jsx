@@ -1,6 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./signin.css";
+import Navbar from "./components/navbar"
 import { color } from "chart.js/helpers";
 
 function signin() {
@@ -12,18 +13,18 @@ function signin() {
 
   return (
     <div className="signin-container">
-      <header className="header">
-        <h1 className="titleP">TEAMCODEX</h1>
-      </header>
-
+      <Navbar />
       <div className="signin-box">
         <h2>Sign-in</h2>
         <form onSubmit={handleLogin}>
+          <input type="text" placeholder="Name" required />
           <input type="text" placeholder="Username" required />
+          <input type="text" placeholder="email" required />
           <input type="password" placeholder="Password" required />
-          <button type="submit">Login</button>
+          <input type="password" placeholder="Repeat Password" required />
+          <button type="submit">Sign-in</button>
           <p className="redirect-text">
-          Don’t have an account?{" "}
+          Already have an?{" "}
           <Link to="/login" className="link-text">login</Link>
           </p>
         </form>
