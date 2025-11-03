@@ -6,21 +6,54 @@ const navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handlepath = () => {
-    if (location.pathname === "/") {
+  const handlepathT = () => {
+    if (location.pathname === "/" || location.pathname === "/login") {
       navigate("/login");
-    } else {
+    }
+    else if (location.pathname === "/signin") {
+      navigate("/signin"); 
+    }
+    else if(location.pathname === "/teamdash/:teamName"){
+      navigate("/profile");
+    }
+     else {
       navigate("/team");
     };
   };
+  const handlepathP = () => {
+    if (location.pathname === "/" || location.pathname === "/login") {
+      navigate("/login");
+    }
+    else if (location.pathname === "/signin") {
+      navigate("/signin"); 
+    }
+    else if(location.pathname === "/teamdash/:teamName"){
+      navigate("/profile");
+    }
+    else if(location.pathname === "/team"){
+      navigate("/profile");
+    }
+  };
+  const handlepathH = () => {
+    if(location.pathname === "/" || location.pathname === "/login" || location.pathname === "/signin"){
+      navigate("/");
+    }
+    else if(location.pathname === "/team"){
+      navigate("/team");
+    }
+    else{
+      navigate("/teamdash/:teamName");
+    }
+  }
+
   return (
     <div>
       <header className="header">
         <div className="left" onClick={() => navigate("/")}>TEAMCODEX</div>
         <div className="center">
-          <span onClick={() => navigate("/")}>Home</span>
-          <span onClick={handlepath}>Team</span>
-          <span onClick={handlepath}>Profile</span>
+          <span onClick={handlepathH}>Home</span>
+          <span onClick={handlepathT}>Team</span>
+          <span onClick={handlepathP}>Profile</span>
         </div>
       </header>
     </div>
