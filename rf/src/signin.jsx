@@ -24,7 +24,7 @@ function signin() {
           <input type="password" placeholder="Repeat Password" required />
           <button type="submit">Sign-in</button>
           <p className="redirect-text">
-          Already have an?{" "}
+          Already have an account?{" "}
           <Link to="/login" className="link-text">login</Link>
           </p>
         </form>

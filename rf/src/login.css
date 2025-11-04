@@ -10,7 +10,7 @@
 
 
 .login-box {
-  margin: auto;
+  margin: auto auto auto 350px;
   width: 300px;
   background: white;
   padding: 30px;
@@ -51,6 +51,23 @@ button{
 .login-box button:hover {
   transform: scale(1.05);
 }
+/* Animation styling */
+.login-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.login-animation {
+  position: absolute;
+  top: 50%;
+  left: 900px; /* adjust to move closer or farther from box */
+  transform: translateY(-50%);
+  width: 500px;
+  height: 500px;
+  border: none;
+  pointer-events: none; /* so it doesn’t block clicks */
+}
+
 
 .footer {
   background-color: #001a33;

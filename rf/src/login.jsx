@@ -28,6 +28,12 @@ function Login() {
           </p>
         </form>
       </div>
+      {/* Lottie animation near the login box */}
+<iframe
+  src="https://lottie.host/embed/9da4034a-5a8f-45f3-999e-6cfe06ce5c43/8rZRVyC7Mj.lottie"
+  className="login-animation"
+  title="login-animation"
+></iframe>
 
       <footer className="footer">
         <p>© 2025 TeamCodex | All Rights Reserved</p>
