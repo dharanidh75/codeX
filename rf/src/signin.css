@@ -17,8 +17,20 @@
 font-size: 2rem;
 }
 
+.signin-animation{
+  margin-top: 200px;
+  margin-left: 80px;
+  height: 450px;
+  width: 450px;
+}
+
+.signin-content{
+  display: flex;
+}
+
 .signin-box {
-  margin: auto;
+  margin-top: 120px;
+  margin-left: 600px;
   width: 300px;
   background: white;
   padding: 30px;
@@ -66,4 +78,5 @@ button{
   text-align: center;
   padding: 15px 20px;
   font-size: 0.9rem;
+  margin-top: auto;
 }
