@@ -2,6 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Navbar from "./components/navbar";
 import "./getstarted.css";
+import Footer from './components/footer.jsx';
 
 function GetStarted() {
   const navigate = useNavigate();
@@ -46,9 +47,7 @@ function GetStarted() {
         </section>
       </main>
 
-      <footer className="footer">
-        <p>© 2025 TeamCodex | All Rights Reserved</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

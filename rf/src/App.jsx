@@ -7,6 +7,7 @@ import Signin from  "./signin.jsx";
 import Team from "./team.jsx";
 import TeamDash from "./teamdash.jsx"; // New dashboard
 import Navbar from './components/navbar.jsx';
+import Footer from './components/footer.jsx';
 import "./getstarted.css";
 import "./login.css";
 import "./signin.jsx"
