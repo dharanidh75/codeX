@@ -1,17 +1,79 @@
-.main-content{
-    background: #f5f5dc;
-    background-size: cover;
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.main-content{
-    display: flex;
-    vertical-align: top;
+/* Outer wrapper for full-height layout */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.profileLogo{
-    display: block;
-    margin: 200px ;
-    height: 300px;
-    width: 350px;
-    border-radius: 50%;
+/* Flexbox layout for profile content */
+.mai-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  background: #f5f5dc;
+  background-size: cover;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Profile image box */
+.content-left {
+  display: inline;
+  margin-bottom: 100px;
+  margin-right: 60px;
+  justify-content: center;
+  align-items: center;
+}
+
+.changeIcon{
+    text-align: center;
+    color: #6B7280;
+}
+
+.profileLogo {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Profile details box */
+.p{
+    font-size: 23px;
+}
+
+/* Footer that sticks to bottom */
+footer {
+  background: #001a33;
+  color: #f5f5dc;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto; /* pushes footer down */
+}
+
+/* Responsive (stack on smaller screens) */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.line{
+    border-left: 2px solid #000000;
+    height: 400px;
+}
+
+.profile-head{
+    font-size: 40px;
+    font-weight: bold;
 }
