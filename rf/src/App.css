@@ -1,0 +1,19 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main-content {
+  min-height: 100dvh; /* dynamic viewport height, best across OSes */
+  background: #f5f5dc;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+.foot {
+  position: sticky; /* or static, depending on design */
+  bottom: 0;
+  width: 100%;
+}

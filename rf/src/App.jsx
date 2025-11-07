@@ -1,4 +1,5 @@
 import React from "react";
+import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import GetStarted from "./getstarted.jsx";
 import Profile from "./profile.jsx";
