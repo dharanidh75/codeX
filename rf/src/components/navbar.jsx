@@ -24,10 +24,7 @@ const navbar = () => {
     else if (location.pathname === "/signin") {
       navigate("/signin"); 
     }
-    else if(location.pathname === "/teamdash/:teamName"){
-      navigate("/profile");
-    }
-    else if(location.pathname === "/team"){
+    else{
       navigate("/profile");
     }
   };

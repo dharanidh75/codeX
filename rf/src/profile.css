@@ -1,0 +1,17 @@
+.main-content{
+    background: #f5f5dc;
+    background-size: cover;
+}
+
+.main-content{
+    display: flex;
+    vertical-align: top;
+}
+
+.profileLogo{
+    display: block;
+    margin: 200px ;
+    height: 300px;
+    width: 350px;
+    border-radius: 50%;
+}
